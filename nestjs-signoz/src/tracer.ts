@@ -24,10 +24,6 @@ const sdk = new opentelemetry.NodeSDK({
   }),
 });
 
-// initialize the SDK and register with the OpenTelemetry API
-// this enables the API to record telemetry
-sdk.start();
-
 // gracefully shut down the SDK on process exit
 process.on('SIGTERM', () => {
   sdk
